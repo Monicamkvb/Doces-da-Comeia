@@ -4,7 +4,20 @@ Algoritmo "DocesDaComeia"
 // QUANTIDADE DE UNIDADE - DOCINHO
 Var
 opcao : caractere
+valorTotal : real
 
+// INICIO ADICIONARCARRINHO
+procedimento adicionarAoCarrinho(vp : real)
+   VAR
+     nomep : caractere
+   INICIO
+    escreval("Digite o nome do produto: ")
+    leia(nomep)
+    escreval("Item ",nomep," adicionado")
+      valortotal <- valorTotal + vp
+      escreval("Valor total do carrinho R$:",valorTotal)
+fimProcedimento
+// FIM ADICIONARCARRINHO
 
 Inicio
 escreval("*********catalogo*********")
@@ -17,5 +30,22 @@ escreval("6 - CANCELAR")
 escreval("7 - CARRINHO")
 
 leia(opcao)
+//switch / case
+escolha(opcao)
+   caso "1"
+      adicionarAoCarrinho(8)
+   caso "2"
+      adicionarAoCarrinho(10)
+   caso "3"
+      adicionarAoCarrinho(15)
+   caso "4"
+      adicionarAoCarrinho(3)
+   caso "5"
+      adicionarAoCarrinho(25)
+   caso "6"
+      escreval("Compra cancelada!")
+   outrocaso
+      escreval("Opção inválida!")
+fimEscolha
 
 Fimalgoritmo
